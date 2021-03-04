@@ -1,11 +1,12 @@
 {
-  "name": "git-commit-simple",
-	"displayName": "git-commit-simple",
+  "name": "git-simple-commit",
+	"displayName": "git-simple-commit",
 	"description": "Simple git commit for VSCode",
 	"version": "0.0.1",
 	"icon": "assets/logo.png",
+	"publisher": "ihupoo",
 	"engines": {
-		"vscode": "^1.14.0"
+		"vscode": "^1.53.0"
 	},
 	"categories": [
 		"Other"
@@ -16,15 +17,24 @@
 		"simple",
 		"conventional"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ihupoo/vscode-git-simple-commit.git"
+	},
+	"author": "ihupoo",
+	"homepage": "https://github.com/ihupoo/vscode-git-simple-commit",
+	"bugs": {
+		"url": "https://github.com/ihupoo/vscode-git-simple-commit/issues"
+	},
 	"activationEvents": [
-        "onCommand:extension.gitCommitSimple"
+        "onCommand:extension.gitSimpleCommit"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.gitCommitSimple",
-				"title": "git-commit-lint",
+				"command": "extension.gitSimpleCommit",
+				"title": "git-simple-commit: 约定式提交",
 				"icon":{
 					"dark": "./assets/git-commit-dark.svg",
 					"light": "./assets/git-commit-light.svg"
@@ -35,15 +45,15 @@
 			"scm/title": [
 				{
 				  "when": "scmProvider == git",
-				  "command": "extension.gitCommitSimple",
+				  "command": "extension.gitSimpleCommit",
 				  "group": "navigation"
 				}
 			  ]
 		},
 		"configuration":{
-			"title": "git-commit-simple",
+			"title": "git-simple-commit",
 			"properties": {
-				"gitCommitSimple.autoCommit":{
+				"gitSimpleCommit.autoCommit":{
 					"type":"boolean",
 					"default": true,
 					"markdownDescription": "是否自动提交改动。"

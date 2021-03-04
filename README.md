@@ -1,4 +1,4 @@
-# git-commit-simple
+# git-simple-commit
 
 基于 [vscode-conventional-commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits) 的简易版
 
